@@ -59,4 +59,6 @@ typings/
 
 # next.js build output
 .next 
-# dot DS_Store .DS_Store
+
+# dot DS_Store 
+.DS_Store
