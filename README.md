@@ -14,3 +14,12 @@ Making matters even more challenging was the fact that my instructor decided to 
 
 After getting some good examples in class, and getting good advice from my instructor, I decided to start tackling the project. 
 Before starting, I planned out the project using a project board. This board enabled me to split the project into smaller, more manageable tasks. 
+
+**First Issue**: The first issue that I ran into on this project was making sure that I got all of the right files downloaded into the program. 
+*Resolved*: I read through the directions for this several times before downloading everything that I needed. 
+
+**Second Issue**: I needed several APIs to make this project work. I was able to get all of the APIs that I needed except for the BandsinTown API. 
+I had to email the customer support department there to get the API that I needed. 
+They don't just give anyone the API. They asked me for verification and for my instructor's verification. 
+*Resolved*: It took me a day to realize that there was an API for Bands in Town already provided. My instructor pointed that out to me **after** I got my own
+API from BandsinTown.  
