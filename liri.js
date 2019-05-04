@@ -8,7 +8,7 @@ var request = require("request");
 var axios = require("axios");
 
 //Require Spotify
-var spotify = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
 
 
 //Declare the right commands. 
@@ -17,19 +17,20 @@ var spotify = require('node-spotify-api');
 var userAction = process.argv[2];
 var inputParameter = process.argv[3];
 
+myChoices(userAction);
+
 //What if the inputParameter has multiple words?
 //We surely do not want this parameter to have a process.arg[4] or even a process.argv[15]
 for(var baba = 4; baba < process.argv.length; baba++){
-    inputParameter += '+' + process.argv[i];
+    inputParameter += '+' + process.argv[baba];
 }
 
 //Get the Spotify keys
-//var spotify = new Spotify(keys.spotify);
-console.log(keys.spotify);
+
+//console.log(spotify);
 
 //Create a switch statement
 function myChoices(userAction){
-
     switch(userAction){
 
         case "concert-this":
@@ -37,7 +38,7 @@ function myChoices(userAction){
         break;
 
         case "spotify-this-song":
-        getSpotify();
+        getSpotify(inputParameter);
         break;
 
         case "movie-this":
@@ -58,15 +59,17 @@ function getSpotify(songName){
     if(songName === undefined){
         songName = "The Ace";
     }
-
+   
+    console.log(songName)
+    var spotify = new Spotify(keys.spotify);
     spotify.search(
         {
             type: "track", 
-            query: userAction
+            query: songName
         },
         function(err, data){
             if(err){
-                console.log("An error occurred");
+                console.log("An error occurred: " + err);
                 return;
             }
 
@@ -76,8 +79,8 @@ function getSpotify(songName){
                 console.log(p);
                 console.log("Artist: " + songlist[p].artists.map(getArtistsName));
                 console.log("Name" + songlist[p].name);
-                console.log("Preview" + songlist.preview_url);
-                console.log("Album" + songlist.album.name);
+                console.log("Preview" + songlist[p].preview_url);
+                console.log("Album" + songlist[p].album.name);
             }
         }
     )
