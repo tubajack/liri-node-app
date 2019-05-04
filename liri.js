@@ -33,12 +33,35 @@ function myChoices(userAction){
     switch(userAction){
 
         case "concert-this":
+        getBandsInTown();
         break;
+
         case "spotify-this-song":
+        getSpotify();
         break;
+
         case "movie-this":
+        getMovies();
         break;
+
         case "do-what-it-says":
+        getObeyTheRules();
         break;
     }
+}
+
+function getBandsInTown(){
+
+}
+
+function getSpotify(){
+
+}
+
+function getMovies(){
+
+}
+
+function getObeyTheRules(){
+    
 }
