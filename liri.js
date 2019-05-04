@@ -19,3 +19,20 @@ var inputParameter = process.argv[3];
 
 //Get the Spotify keys
 var spotify = new Spotify(keys.spotify);
+
+
+//Create a switch statement
+function myChoices(userAction){
+
+    switch(userAction){
+
+        case "concert-this":
+        break;
+        case "spotify-this-song":
+        break;
+        case "movie-this":
+        break;
+        case "do-what-it-says":
+        break;
+    }
+}
