@@ -17,8 +17,14 @@ var spotify = require('node-spotify-api');
 var userAction = process.argv[2];
 var inputParameter = process.argv[3];
 
+//What if the inputParameter has multiple words?
+//We surely do not want this parameter to have a process.arg[4] or even a process.argv[15]
+for(var baba = 4; baba < process.argv.length; baba++){
+    inputParameter += '+' + process.argv[i];
+}
+
 //Get the Spotify keys
-var spotify = new Spotify(keys.spotify);
+//var spotify = new Spotify(keys.spotify);
 
 
 //Create a switch statement
