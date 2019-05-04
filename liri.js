@@ -50,11 +50,11 @@ function myChoices(userAction){
     }
 }
 
-var getBandsInTown = function(bands){
+function getBandsInTown(bands){
 
 }
 
-var getSpotify = function(songName){
+function getSpotify(songName){
     if(songName === undefined){
         songName = "The Ace";
     }
@@ -84,10 +84,16 @@ var getSpotify = function(songName){
 
 }
 
-var getMovies = function(movie){
+function getMovies(movie){
 
 }
 
-var getObeyTheRules = function(obeyOrElse){
+function getObeyTheRules(obeyOrElse){
+    fs.readFile("random.txt", "utf8", function(err, data){
+
+        var txt = data.split(",");
+        getSpotify(txt[1]);
+
+    });
 
 }
