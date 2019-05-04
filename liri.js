@@ -25,7 +25,7 @@ for(var baba = 4; baba < process.argv.length; baba++){
 
 //Get the Spotify keys
 //var spotify = new Spotify(keys.spotify);
-
+console.log(keys.spotify);
 
 //Create a switch statement
 function myChoices(userAction){
@@ -50,18 +50,44 @@ function myChoices(userAction){
     }
 }
 
-function getBandsInTown(){
+var getBandsInTown = function(bands){
 
 }
 
-function getSpotify(){
+var getSpotify = function(songName){
+    if(songName === undefined){
+        songName = "The Ace";
+    }
+
+    spotify.search(
+        {
+            type: "track", 
+            query: userAction
+        },
+        function(err, data){
+            if(err){
+                console.log("An error occurred");
+                return;
+            }
+
+            var songlist = data.tracks.items;
+
+            for(var p = 0; p < songlist.length; p++){
+                console.log(p);
+                console.log("Artist: " + songlist[p].artists.map(getArtistsName));
+                console.log("Name" + songlist[p].name);
+                console.log("Preview" + songlist.preview_url);
+                console.log("Album" + songlist.album.name);
+            }
+        }
+    )
 
 }
 
-function getMovies(){
+var getMovies = function(movie){
 
 }
 
-function getObeyTheRules(){
-    
+var getObeyTheRules = function(obeyOrElse){
+
 }
