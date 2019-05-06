@@ -74,15 +74,15 @@ function getSpotify(songName){
             }
 
             var songlist = data.tracks.items;
-            var artistInfo = songlist.map(val => val.artists.map(name => name.name))
-            //console.log(artistInfo);
+            var artistInfo = songlist.map(val => val.artists.map(name => name.name));
+            //console.log(songlist)
             
             for(var p = 0; p < songlist.length; p++){
                 console.log(p);
                 console.log("Artist(s): ");
                 console.log("Song Name: " + songlist[p].name);
-                console.log("Preview: ");
-                console.log("Album: ");
+                console.log("Preview: " + songlist[p].preview_url);
+                console.log("Album: " + artistInfo[p]);
             }
 
             
