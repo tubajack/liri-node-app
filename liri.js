@@ -79,10 +79,10 @@ function getSpotify(songName){
             
             for(var p = 0; p < songlist.length; p++){
                 console.log(p);
-                console.log("Artist(s): ");
+                console.log("Artist(s): " + artistInfo[p]);
                 console.log("Song Name: " + songlist[p].name);
-                console.log("Preview: " + songlist[p].preview_url);
-                console.log("Album: " + artistInfo[p]);
+                console.log("Preview: ");
+                console.log("Album: ");
             }
 
             
