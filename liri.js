@@ -74,17 +74,18 @@ function getSpotify(songName){
             }
 
             var songlist = data.tracks.items;
-            var artistInfo = songlist.map(val => val.artists.map(name => name.name));
-            console.log(artistInfo);
-            //console.log(songlist);
+            var artistInfo = songlist.map(val => val.artists.map(name => name.name))
+            //console.log(artistInfo);
+            
+            for(var p = 0; p < songlist.length; p++){
+                console.log(p);
+                console.log("Artist(s): ");
+                console.log("Song Name: " + songlist[p].name);
+                console.log("Preview: ");
+                console.log("Album: ");
+            }
 
-            // for(var p = 0; p < songlist.length; p++){
-            //     console.log(p);
-            //     // console.log("Artist: " + songlist[p].artists);
-            //     // console.log("Name: " + songlist[p].name);
-            //     // console.log("Preview: " + songlist[p].preview_url);
-            //     // console.log("Album: " + songlist[p].album.name);
-            // }
+            
         }
     )
 
