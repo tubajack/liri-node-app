@@ -60,7 +60,7 @@ function getSpotify(songName){
         songName = "The Ace";
     }
    
-    // console.log(songName)
+    //console.log(songName)
     var spotify = new Spotify(keys.spotify);
     spotify.search(
         {
@@ -75,17 +75,16 @@ function getSpotify(songName){
 
             var songlist = data.tracks.items;
             var artistInfo = songlist.map(val => val.artists.map(name => name.name));
-            //console.log(songlist)
+            //console.log(artistInfo)
             
             for(var p = 0; p < songlist.length; p++){
                 console.log(p);
                 console.log("Artist(s): " + artistInfo[p]);
                 console.log("Song Name: " + songlist[p].name);
-                console.log("Preview: ");
+                console.log("Preview: " + songlist[p].preview_url);
                 console.log("Album: ");
             }
 
-            
         }
     )
 
