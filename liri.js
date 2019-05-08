@@ -52,6 +52,8 @@ function myChoices(userAction){
 }
 
 function getBandsInTown(bands){
+    var bandName = inputParameter;
+    var query = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
 
 }
 
