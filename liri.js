@@ -93,6 +93,9 @@ function getSpotify(songName){
 }
 
 function getMovies(movie){
+    var movieName = inputParameter;
+    var movieURL = "http://www.omdbapi.com/?i=tt3896198&apikey=feed5952" + movieName + "&y=&plot=short&apikey=trilogy";
+
 
 }
 
