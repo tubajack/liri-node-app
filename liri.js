@@ -96,16 +96,38 @@ function getSpotify(songName){
 function getMovies(movie){
     var axios = require("axios");
     var movieName = inputParameter;
-    var movieURL = "http://www.omdbapi.com/?i=tt3896198" + movieName + "&y=&plot=short&apikey=feed5952";
+    var movieURL = "http://www.omdbapi.com/?t= " + movieName + "&y=&plot=short&apikey=trilogy";
 
     axios.get(movieURL).then(
         function(response){
             console.log("-----Movie Information-----");
+            console.log("Movie Title: " + response.data.Title);
+            console.log("Release Year: " + response.data.Year);
         }
     )
 
 
 }
+
+// function getMovies(movie){
+//     var movieName = inputParameter;
+//     var movieURL = "http://www.omdbapi.com/?i=tt3896198" + movieName + "&y=&plot=short&apikey=feed5952";
+    
+//     request(movieURL, function(error, response, body){
+//         if(!error && response.statusCode === 200){
+//             var movieInfo = JSON.parse(body);
+//             console.log("-----Movie Information-----");
+//             console.log("Movie Title: " + movieInfo.title);
+//             console.log("Release Year: " + movieInfo.year);
+//             console.log("IMDB Rating: ");
+//             console.log("Rotten Tomatoes Rating: ");
+//             console.log("Country Produced: " + movieInfo.country);
+//             console.log("Language: " + movieInfo.language);
+//             console.log("Plot: " + movieInfo.plot);
+//             console.log("Actors: " + movieInfo.actors);
+//         }
+//     })
+// }
 
 function getObeyTheRules(obeyOrElse){
     fs.readFile("random.txt", "utf8", function(err, data){
