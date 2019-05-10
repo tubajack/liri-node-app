@@ -1,5 +1,6 @@
 //Read and set environment variables with the .env package
 require("dotenv").config();
+var momentJS = require("moment");
 
 //All of the required vars
 var keys = require("./keys.js");
@@ -53,7 +54,7 @@ function myChoices(userAction){
 
 function getBandsInTown(bands){
     var bandName = inputParameter;
-    var query = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp";
+    var query = "https://rest.bandsintown.com/artists/" + bands + "/events?app_id=codingbootcamp";
 
 }
 
@@ -95,7 +96,7 @@ function getSpotify(songName){
 function getMovies(movie){
     var axios = require("axios");
     var movieName = inputParameter;
-    var movieURL = "http://www.omdbapi.com/?i=tt3896198&apikey=feed5952" + movieName + "&y=&plot=short&apikey=trilogy";
+    var movieURL = "http://www.omdbapi.com/?i=tt3896198" + movieName + "&y=&plot=short&apikey=feed5952";
 
     axios.get(movieURL).then(
         function(response){
