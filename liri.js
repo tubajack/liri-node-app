@@ -100,11 +100,12 @@ function getMovies(movie){
 
     axios.get(movieURL).then(
         function(response){
+            console.log(response.data);
             console.log("-----Movie Information-----");
             console.log("Movie Title: " + response.data.Title);
             console.log("Release Year: " + response.data.Year);
             console.log("IMDb Rating: " + response.data.imdbRating);
-            console.log("Rotten Tomatoes Rating: ");
+            console.log("Rotten Tomatoes Rating: " + response.data.Ratings[0].Value);
             console.log("Country Produced: " + response.data.Country);
             console.log("Language: " + response.data.Language);
             console.log("Plot: " + response.data.Plot);
