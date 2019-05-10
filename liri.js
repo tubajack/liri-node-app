@@ -103,6 +103,12 @@ function getMovies(movie){
             console.log("-----Movie Information-----");
             console.log("Movie Title: " + response.data.Title);
             console.log("Release Year: " + response.data.Year);
+            console.log("IMDb Rating: " + response.data.imdbRating);
+            console.log("Rotten Tomatoes Rating: ");
+            console.log("Country Produced: " + response.data.Country);
+            console.log("Language: " + response.data.Language);
+            console.log("Plot: " + response.data.Plot);
+            console.log("Actors: " + response.data.Actors);
         }
     )
 
