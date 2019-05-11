@@ -30,3 +30,11 @@ API from BandsinTown.
 ## Functions in the liri.js Application
 Since I will not be able to deploy this site to github pages, it is important that I have a good readMe page in order to ensure that this project works. 
 There are four functions: BandsInTown, Spotify, MovieAPI, and Do What it Says. Each of these functions will be discussed in further detail. 
+
+### Bands in Town
+
+### Spotify
+
+### MovieAPI
+
+### Do What it Says
