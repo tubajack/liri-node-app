@@ -20,15 +20,6 @@ var inputParameter = process.argv[3];
 
 myChoices(userAction);
 
-//What if the inputParameter has multiple words?
-//We surely do not want this parameter to have a process.arg[4] or even a process.argv[15]
-for(var baba = 4; baba < process.argv.length; baba++){
-    inputParameter += '+' + process.argv[baba];
-}
-
-//Get the Spotify keys
-
-//console.log(spotify);
 
 //Create a switch statement
 function myChoices(userAction){
@@ -97,8 +88,12 @@ function getSpotify(songName){
     if(songName === undefined){
         songName = "The Ace";
     }
+
+    for(var newParameter = 4; newParameter < process.argv.length; newParameter++){
+        inputParameter += '+' + process.argv[newParameter];
+    }
+    var songName = inputParameter;
    
-    //console.log(songName)
     var spotify = new Spotify(keys.spotify);
     spotify.search(
         {
