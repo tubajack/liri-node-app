@@ -58,12 +58,19 @@ function getBandsInTown(bands){
 
     request(query, function(error, response, body){
         if(!error & response.statusCode === 200){
-            console.log("This is great");
+            var data = JSON.parse(body);
+            console.log(data.length);
+            
+            for(var chloe = 0; chloe < data.length; chloe++){
+                console.log("Venue: " + data[chloe].venue.name);
+            }
         }
-    })
+    });
 
 
 }
+
+
 
 function getSpotify(songName){
     if(songName === undefined){
