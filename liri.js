@@ -85,15 +85,17 @@ function getBandsInTown(bands){
 
 
 function getSpotify(songName){
-    if(songName === undefined){
+
+    var songName = inputParameter;
+
+    if(songName === undefined || songName === ""){
         songName = "The Ace";
     }
 
     for(var newParameter = 4; newParameter < process.argv.length; newParameter++){
         inputParameter += '+' + process.argv[newParameter];
     }
-    var songName = inputParameter;
-   
+    
     var spotify = new Spotify(keys.spotify);
     spotify.search(
         {
