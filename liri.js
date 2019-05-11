@@ -53,9 +53,13 @@ function myChoices(userAction){
 }
 
 function getBandsInTown(bands){
+
+    for(var newParameter = 4; newParameter < process.argv.length; newParameter++){
+        inputParameter += '+' + process.argv[newParameter];
+    }
+
     var bands = inputParameter;
     var query = "https://rest.bandsintown.com/artists/" + bands + "/events?app_id=codingbootcamp";
-    console.log(bands);
 
     request(query, function(error, response, body){
         if(!error & response.statusCode === 200){
@@ -151,26 +155,6 @@ function getMovies(movieURL){
         )
     }
 }
-
-// function getMovies(movie){
-//     var movieName = inputParameter;
-//     var movieURL = "http://www.omdbapi.com/?i=tt3896198" + movieName + "&y=&plot=short&apikey=feed5952";
-    
-//     request(movieURL, function(error, response, body){
-//         if(!error && response.statusCode === 200){
-//             var movieInfo = JSON.parse(body);
-//             console.log("-----Movie Information-----");
-//             console.log("Movie Title: " + movie.Title);
-//             console.log("Release Year: " + movie.Year);
-//             console.log("IMDB Rating: " + movie.imdbRating);
-//             console.log("Rotten Tomatoes Rating: ");
-//             console.log("Country Produced: " + movieInfo.country);
-//             console.log("Language: " + movieInfo.language);
-//             console.log("Plot: " + movieInfo.plot);
-//             console.log("Actors: " + movieInfo.actors);
-//         }
-//     })
-// }
 
 function getObeyTheRules(obeyOrElse){
     fs.readFile("random.txt", "utf8", function(err, data){
