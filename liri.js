@@ -85,16 +85,16 @@ function getBandsInTown(bands){
 
 
 function getSpotify(songName){
-
     var songName = inputParameter;
 
-    if(songName === undefined || songName === ""){
+    if(songName === undefined){
         songName = "The Ace";
     }
 
     for(var newParameter = 4; newParameter < process.argv.length; newParameter++){
         inputParameter += '+' + process.argv[newParameter];
     }
+
     
     var spotify = new Spotify(keys.spotify);
     spotify.search(
@@ -163,8 +163,9 @@ function getObeyTheRules(obeyOrElse){
     fs.readFile("random.txt", "utf8", function(err, data){
 
         var txt = data.split(",");
+        userAction = txt[0];
+        inputParameter = txt[1];
         getSpotify(txt[1]);
-
     });
 
 }
