@@ -25,3 +25,8 @@ They don't just give anyone the API. They asked me for verification and for my i
 
 *Resolved*: It took me a day to realize that there was an API for Bands in Town already provided. My instructor pointed that out to me **after** I got my own
 API from BandsinTown.  
+
+
+## Functions in the liri.js Application
+Since I will not be able to deploy this site to github pages, it is important that I have a good readMe page in order to ensure that this project works. 
+There are four functions: BandsInTown, Spotify, MovieAPI, and Do What it Says. Each of these functions will be discussed in further detail. 
