@@ -63,6 +63,13 @@ function getBandsInTown(bands){
             
             for(var chloe = 0; chloe < data.length; chloe++){
                 console.log("Venue: " + data[chloe].venue.name);
+
+                if(data[chloe].venue.region == ""){
+                    console.log("Location: " + data[chloe].venue.city + "," + data[chloe].venue.country);
+                }
+                else{
+                    console.log("Location: " + data[chloe].venue.city + "," + data[chloe].venue.region + "," + data[chloe].venue.country);
+                }
             }
         }
     });
