@@ -55,21 +55,29 @@ function myChoices(userAction){
 function getBandsInTown(bands){
     var bands = inputParameter;
     var query = "https://rest.bandsintown.com/artists/" + bands + "/events?app_id=codingbootcamp";
+    console.log(bands);
 
     request(query, function(error, response, body){
         if(!error & response.statusCode === 200){
-            var data = JSON.parse(body);
-            console.log(data.length);
+            var brock = JSON.parse(body);
+            console.log(brock.length);
             
-            for(var chloe = 0; chloe < data.length; chloe++){
-                console.log("Venue: " + data[chloe].venue.name);
+            for(var chloe = 0; chloe < brock.length; chloe++){
+                //This code is giving us the venue of our concert
+                console.log("Venue: " + brock[chloe].venue.name);
 
-                if(data[chloe].venue.region == ""){
-                    console.log("Location: " + data[chloe].venue.city + "," + data[chloe].venue.country);
+                //This code gives us the location of our concert
+                if(brock[chloe].venue.region == ""){
+                    console.log("Location: " + brock[chloe].venue.city + "," + brock[chloe].venue.country);
                 }
                 else{
-                    console.log("Location: " + data[chloe].venue.city + "," + data[chloe].venue.region + "," + data[chloe].venue.country);
+                    console.log("Location: " + brock[chloe].venue.city + "," + brock[chloe].venue.region + "," + brock[chloe].venue.country);
                 }
+
+                //Finally, we need to get the date of our concert
+                //Remember to put the date in moment.JS. 
+                console.log("Date: " + brock[chloe].datetime);
+                console.log("\n");
             }
         }
     });
