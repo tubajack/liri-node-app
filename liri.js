@@ -43,7 +43,7 @@ function myChoices(userAction){
         break;
 
         case "movie-this":
-        getMovies();
+        getMovies(inputParameter);
         break;
 
         case "do-what-it-says":
@@ -53,8 +53,15 @@ function myChoices(userAction){
 }
 
 function getBandsInTown(bands){
-    var bandName = inputParameter;
+    var bands = inputParameter;
     var query = "https://rest.bandsintown.com/artists/" + bands + "/events?app_id=codingbootcamp";
+
+    request(query, function(error, response, body){
+        if(!error & response.statusCode === 200){
+            console.log("This is great");
+        }
+    })
+
 
 }
 
@@ -93,10 +100,9 @@ function getSpotify(songName){
 
 }
 
-function getMovies(movie){
-    var axios = require("axios");
+function getMovies(movieURL){
     var movieName = inputParameter;
-    var movieURL = "http://www.omdbapi.com/?t= " + movieName + "&y=&plot=short&apikey=trilogy";
+    var movieURL = "http://www.omdbapi.com/?t= " + movieName + "&y=&plot=short&tomatoes=true&apikey=trilogy";
 
     if(!movieName){
         var nobody = "http://www.imdb.com/title/tt0485947/"
@@ -107,7 +113,7 @@ function getMovies(movie){
     else{
         axios.get(movieURL).then(
             function(response){
-                console.log(response.data);
+                console.log(inputParameter);
                 console.log("-----Movie Information-----");
                 console.log("Movie Title: " + response.data.Title);
                 console.log("Release Year: " + response.data.Year);
@@ -130,9 +136,9 @@ function getMovies(movie){
 //         if(!error && response.statusCode === 200){
 //             var movieInfo = JSON.parse(body);
 //             console.log("-----Movie Information-----");
-//             console.log("Movie Title: " + movieInfo.title);
-//             console.log("Release Year: " + movieInfo.year);
-//             console.log("IMDB Rating: ");
+//             console.log("Movie Title: " + movie.Title);
+//             console.log("Release Year: " + movie.Year);
+//             console.log("IMDB Rating: " + movie.imdbRating);
 //             console.log("Rotten Tomatoes Rating: ");
 //             console.log("Country Produced: " + movieInfo.country);
 //             console.log("Language: " + movieInfo.language);
