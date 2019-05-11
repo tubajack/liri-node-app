@@ -124,7 +124,13 @@ function getSpotify(songName){
 }
 
 function getMovies(movieURL){
+
+    for(var newMovie = 4; newMovie < process.argv.length; newMovie++){
+        inputParameter += '+' + process.argv[newMovie];
+    }
+
     var movieName = inputParameter;
+    console.log(movieName);
     var movieURL = "http://www.omdbapi.com/?t= " + movieName + "&y=&plot=short&tomatoes=true&apikey=trilogy";
 
     if(!movieName){
