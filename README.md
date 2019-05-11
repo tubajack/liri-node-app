@@ -11,6 +11,7 @@ LIRI is a Language Interpretation and Recognition Interface.
 ## Creating the Application
 When I first saw the specifications of how to complete this project, I thought that this is definitely going to be challenging. 
 Making matters even more challenging was the fact that my instructor decided to push the due date up a week. 
+He was later willing to move it back a week because the other class got another week to do the project. 
 
 After getting some good examples in class, and getting good advice from my instructor, I decided to start tackling the project. 
 Before starting, I planned out the project using a project board. This board enabled me to split the project into smaller, more manageable tasks. 
@@ -32,6 +33,13 @@ Since I will not be able to deploy this site to github pages, it is important th
 There are four functions: BandsInTown, Spotify, MovieAPI, and Do What it Says. Each of these functions will be discussed in further detail. 
 
 ### Bands in Town
+To run the BandsInTown application, I typed in concert-this for the user Action. 
+
+The first challenge, discussed earlier was getting the API for the band. After talking with my instructor, I realized that Trilogy had provided the API for me, and that I did not need to go through all of the trouble to get the application. BandsInTown was willing to give me an API after talking with customer service for a day. 
+
+Let's say I type in a popular band like *twenty one pilots*. Another challenge that I ran into was how do I account for a band name with multiple words. Originally, I had some code accounting for this at the header of the program. To fix this problem (and get the minimum viable product. (I still didn't figure out not to repeat myself)), I had to put this code in the BandsInTown, Spotify, and MovieAPI functions. 
+
+![alt text](BandsInTown-MultipleWordInput.jpg)
 
 ### Spotify
 

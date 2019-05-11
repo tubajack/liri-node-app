@@ -55,7 +55,7 @@ function getBandsInTown(bands){
     request(query, function(error, response, body){
         if(!error & response.statusCode === 200){
             var brock = JSON.parse(body);
-            console.log(brock.length);
+            //console.log(brock.length);
             
             for(var chloe = 0; chloe < brock.length; chloe++){
                 //This code is giving us the venue of our concert
