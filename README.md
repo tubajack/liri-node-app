@@ -41,6 +41,12 @@ Let's say I type in a popular band like *twenty one pilots*. Another challenge t
 
 ![alt text](BandsInTown-MultipleWordInput.jpg)
 
+This was not the problem for a popular band like *Korn* which only has a single word. 
+
+![alt text](BandsInTown-SingleWordInput.jpg)
+
+This function is will tell you when and where your favorite band is performing next. 
+
 ### Spotify
 
 ### MovieAPI
