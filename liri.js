@@ -76,7 +76,9 @@ function getBandsInTown(bands){
 
                 //Finally, we need to get the date of our concert
                 //Remember to put the date in moment.JS. 
-                console.log("Date: " + brock[chloe].datetime);
+                var johnBroddaeus = brock[chloe].datetime;
+                johnBroddaeus = momentJS(johnBroddaeus).format("MM/DD/YYYY")
+                console.log("Date: " + johnBroddaeus);
                 console.log("\n");
             }
         }
