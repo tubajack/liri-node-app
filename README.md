@@ -97,4 +97,4 @@ input parameter: twenty one pilots
 Problem I ran into: I used JSON in this function. Could not figure out an alternative way to get this code to work without JSON. 
 When I tried to run this, I ran into the unexpected token in JSON error. 
 
-What I may need to do with this function is have it run everything in the file. This will be necessary with a for loop. 
+What I can do with this function is have it run everything in the file. This will be necessary with a for loop. 
