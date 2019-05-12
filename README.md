@@ -47,22 +47,28 @@ This was not the problem for a popular band like *Korn* which only has a single 
 
 This function is will tell you when and where your favorite band is performing next. 
 
+
 ### Spotify
 To run the Spotify application, I typed in spotify-this for the user action. 
 
 I initially had trouble setting up this function. It took a few minutes working with one of my TAs, but we managed to figure out how to properly set up the Artist Information. 
 In addition, while working on this function, I learned about the usefulness of the map function. 
 
+![alt text](images/MapFunction.jpg)
+
 Like the BandsInTown application, another big challenge was accounting for songs that had multiple words. (I know that I am violating the DRY principle in this program, but these functions are working properly). To solve the problem, I had to write the code which concatenated multi-word inputs in each function. 
+
+![alt text](images/BohemianRhapsody.jpg)
 
 
 ### MovieAPI
 To run the MovieAPI application, I typed in movie-this for the user application. 
 
-One major challenge of the MovieAPI was accounting for all of the ratings. Not every movie entered had a rotten tomatoes rating. My instructor and I were discussing about whether all of the ratings were displayed in an array. To solve this, I console logged response and consloe logged response.data to look at how to find out the parameters. I haven't completely solved this problem, but I have come up with a "quick-fix" approach which would avoid giving me a major error. 
+One major challenge of the MovieAPI was accounting for all of the ratings. Not every movie entered had a rotten tomatoes rating. My instructor and I were discussing about whether all of the ratings were displayed in an array. To solve this, I console logged response and console logged response.data to look at how to find out the parameters. I haven't completely solved this problem, but I have come up with a "quick-fix" approach which would avoid giving me a major error. Turns out, Antonio was right. 
 
 Another problem with the Movie API is that it doesn't seem to output exactly what I inputted. For example, when I input Little for the input parameter, 
 
+![alt text](images/Little.jpg)
 
 I get the Little Mermaid as my result. I am not sure if that is due to the API, or if that is due to a mistake in the code. I have been testing this function, and have gotten the movie name to output correctly. 
 
@@ -82,9 +88,13 @@ For the movie API:
 user action: movie-this
 input parameter: 300
 
+![alt text](images/DoWhatItSays-Movies.jpg)
 
 For the Bands in Town API: 
 user action: concert-this
 input parameter: twenty one pilots
+
+Problem I ran into: I used JSON in this function. Could not figure out an alternative way to get this code to work without JSON. 
+When I tried to run this, I ran into the unexpected token in JSON error. 
 
 What I may need to do with this function is have it run everything in the file. This will be necessary with a for loop. 
