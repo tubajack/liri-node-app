@@ -75,6 +75,8 @@ The default response from the random.txt file is:
 user action: spotify-this-song
 input parameter: I want it that way 
 
+![alt text](images/DoWhatItSays-Spotify.jpg)
+
 I am going to try a couple of other responses from the random.txt file.
 For the movie API: 
 user action: movie-this
