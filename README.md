@@ -6,7 +6,7 @@ The LIRI bot is similar to the Iphone's SIRI.
 The biggest difference is that SIRI is a Speech Interpretation and Recognition Interface. 
 LIRI is a Language Interpretation and Recognition Interface. 
 
-![alt text](SIRI.jpg)
+![alt text](images/SIRI.jpg)
 
 ## Creating the Application
 When I first saw the specifications of how to complete this project, I thought that this is definitely going to be challenging. 
@@ -39,11 +39,11 @@ The first challenge, discussed earlier was getting the API for the band. After t
 
 Let's say I type in a popular band like *twenty one pilots*. Another challenge that I ran into was how do I account for a band name with multiple words. Originally, I had some code accounting for this at the header of the program. To fix this problem (and get the minimum viable product. (I still didn't figure out not to repeat myself)), I had to put this code in the BandsInTown, Spotify, and MovieAPI functions. 
 
-![alt text](BandsInTown-MultipleWordInput.jpg)
+![alt text](images/BandsInTown-MultipleWordInput.jpg)
 
 This was not the problem for a popular band like *Korn* which only has a single word. 
 
-![alt text](BandsInTown-SingleWordInput.jpg)
+![alt text](images/BandsInTown-SingleWordInput.jpg)
 
 This function is will tell you when and where your favorite band is performing next. 
 
